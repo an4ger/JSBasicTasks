@@ -1,0 +1,1 @@
+Here is little js tasks what i decided.
