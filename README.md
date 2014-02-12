@@ -1,1 +1,1 @@
-Here is little js tasks what i decided. hmm
+Here is little js tasks what i decided.
