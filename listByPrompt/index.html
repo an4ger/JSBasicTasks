@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>list</title>
+</head>
+<body>
+<script>
+    var ul = document.createElement('ul');
+    document.body.appendChild(ul);
+    while (true) {
+        var liElem = document.createElement('li');
+        text = prompt('Write text', '');
+        if (text === null) break;
+        liElem.appendChild(document.createTextNode(text));
+        ul.appendChild(liElem);
+    }
+</script>
+</body>
+</html>
