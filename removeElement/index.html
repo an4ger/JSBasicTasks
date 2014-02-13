@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>Это</div>
+<div>Все</div>
+<div>Элементы DOM</div>
+
+<script>
+    var elem = document.body.children[0];
+
+    remove(elem);   // <-- функция должна удалить элемент
+
+    function remove(elem) {
+        return elem.parentNode ? elem.parentNode.removeChild(elem): elem;
+    }
+
+</script>
+</body>
+</html>
