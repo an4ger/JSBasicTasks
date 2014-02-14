@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<input type="button" onclick="clockStart()" value="Start">
+
+<input type="button" onclick="clockStop()" value="Stop">
+
+<script>
+    var spanHour = document.createElement('span');
+    var spanMin = document.createElement('span');
+    var spanSec = document.createElement('span');
+    spanHour.id = 'hour';
+    spanMin.id = 'minute';
+    spanSec.id = 'second';
+    document.body.appendChild(spanHour);
+    document.body.appendChild(spanMin);
+    document.body.appendChild(spanSec);
+    function setTime() {
+        var today = new Date();
+        document.getElementById('hour').innerHTML = today.getHours() + ' : ';
+        document.getElementById('minute').innerHTML = today.getMinutes() + ' : ';
+        document.getElementById('second').innerHTML = today.getSeconds();
+    }
+    var intervalID;
+    function clockStart() {
+        if (intervalID) return;
+        intervalID = setInterval('setTime()', 1000);
+        setTime();
+    }
+    function clockStop() {
+        clearInterval(intervalID);
+        intervalID = null;
+    }
+
+</script>
+
+</body>
+</html>
