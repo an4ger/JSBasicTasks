@@ -3,7 +3,6 @@ var labelInTable = table.getElementsByTagName('label');
 var firstCell = table.getElementsByTagName('td')[0];
 var secondForm = document.getElementsByTagName('form')[1];
 var searchForm = document.getElementsByName('search')[0];
-    //searchForm = document.forms.search;
 var searchFormInput = searchForm.getElementsByTagName('input')[0];
 var info0ElementViaDocument = document.getElementsByName('info[0]')[0];
 var info0ElementViaForm = document.forms['search-person'].elements['info[0]'];

@@ -10,9 +10,7 @@
 
 <script>
     var elem = document.body.children[0];
-
-    remove(elem);   // <-- функция должна удалить элемент
-
+    remove(elem);                          // <-- функция должна удалить элемент
     function remove(elem) {
         return elem.parentNode ? elem.parentNode.removeChild(elem): elem;
     }
