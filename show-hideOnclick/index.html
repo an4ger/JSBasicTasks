@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .menu .sweet {
+            background: url("arrow-right.png") left no-repeat;
+            padding: 0 0 0 17px;
+        }
+
+        .open_menu .sweet {
+            background: url("arrow-down.png") left no-repeat;
+        }
+
+        .menu ul {
+            display: none;
+        }
+
+        .open_menu ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id='wrapper' class='menu'>
+    <span id='sweet_title' class='sweet'>Сладости (нажми меня)!</span>
+    <ul>
+        <li>Торт</li>
+        <li>Пончик</li>
+        <li>Пирожное</li>
+    </ul>
+</div>
+
+<script>
+
+    var wrapperElement = document.getElementById('wrapper');
+    console.log(wrapperElement.children[0]);
+    wrapperElement.children[0].onclick = function() {
+        if (hasClass(wrapperElement, 'open_menu')) {
+            removeClass(wrapperElement, 'open_menu');
+        }
+        else addClass(wrapperElement, 'open_menu') ;
+    }
+    // ----------- ... вспомогательные функции ...  --------------
+
+    function addClass(el, cls) {
+        for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+            if (c[i] == cls) return;
+        }
+        if (el.className == "") el.className = cls
+        else el.className += ' '+cls
+    }
+
+    function hasClass(el, cls) {
+        for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+            if (c[i] == cls) return true;
+        }
+    }
+
+    function removeClass(el, cls) {
+        for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+            if (c[i] == cls) c.splice(i,1);
+        }
+
+        el.className = c.join(' ');
+    }
+
+</script>
+
+</body>
+</html>
