@@ -1,0 +1,6 @@
+td {
+    font-size: 150%;
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+}
