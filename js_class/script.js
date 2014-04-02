@@ -1,10 +1,12 @@
 function Animal(name, type) {
     this.name = name;
     this.type = type;
-    this.toString = function() {
-        return this.name + ' is a ' + this.type;
-    };
 }
+
+//create method 'toString' once in prototype, not in ever new object
+Animal.prototype.toString = function() {
+    return this.name + ' is a ' + this.type;
+};
 
 var dog = new Animal('Max', 'dog');
 dog.toString(); // should return 'Max is a dog'
