@@ -7,3 +7,11 @@ function factorialDivision(n, d) {
     }
     return a;
 }
+
+//recursion
+function factorialDivisionR(n, d) {
+    if(n == d) return 1;
+    return n*factorialDivision(n-1, d);
+}
+
+factorialDivision(5, 20);
