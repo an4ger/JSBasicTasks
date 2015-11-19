@@ -1,1 +1,1 @@
-I decided simple js tasks here.
+Simple js tasks.
